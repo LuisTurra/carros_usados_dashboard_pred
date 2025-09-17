@@ -357,8 +357,8 @@ fig.update_layout(
         'x': 0.5,
         'xanchor': 'center',
         'yanchor': 'top',
-        'font': {'size': 18, 'family': 'Arial', 'color': '#FFFFFF'}  # Reduced title font size
     },
+    title_font={'size': 18, 'family': 'Arial', 'color': '#FFFFFF'},  # ✅ Correct place
     geo=dict(
         showframe=False,
         showcoastlines=True,
@@ -367,7 +367,7 @@ fig.update_layout(
         bgcolor='rgba(0,0,0,0)',
         showland=True,
         landcolor='rgba(50,50,50,0.2)',
-        resolution=50,  # Lower resolution for faster rendering
+        resolution=50,
     ),
     coloraxis_colorbar=dict(
         title='Média de Preço (USD)',
@@ -376,20 +376,19 @@ fig.update_layout(
         tickprefix='$',
         tickformat=',.0f',
         bgcolor='rgba(0,0,0,0)',
-        len=0.6,  # Shortened colorbar length
-        thickness=15,  # Thinner colorbar for less space
+        len=0.6,
+        thickness=15,
         tickvals=[
             country_avg['price'].min(),
             country_avg['price'].mean(),
             country_avg['price'].max()
-        ],  # Added mean for better scale
+        ],
     ),
     paper_bgcolor='rgba(0,0,0,0)',
     plot_bgcolor='rgba(0,0,0,0)',
-    font=dict(color='#FFFFFF', family='Arial', size=10),  # Reduced global font size
-    margin=dict(l=10, r=10, t=40, b=40),  # Tighter margins
-    autosize=True,  # Allow figure to adjust to container
-    
+    font=dict(color='#FFFFFF', family='Arial', size=10),
+    margin=dict(l=10, r=10, t=40, b=40),
+    autosize=True,
 )
 
 fig.update_traces(
