@@ -389,7 +389,7 @@ fig.update_layout(
     font=dict(color='#FFFFFF', family='Arial', size=10),  # Reduced global font size
     margin=dict(l=10, r=10, t=40, b=40),  # Tighter margins
     autosize=True,  # Allow figure to adjust to container
-    showlegend=False
+    
 )
 
 fig.update_traces(
