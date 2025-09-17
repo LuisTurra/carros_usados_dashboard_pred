@@ -16,7 +16,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 if st.button("Predição de Preço por Carro"):
-    js = "window.open('https://your-second-app-url/', '_blank')"  # replace with your app URL
+    js = "window.open('https://your-second-app-url/', '_blank')"  
     components.html(f"<script>{js}</script>", height=0)
 st.markdown(
     """<hr style="border:2px solid #900ACA; border-radius:5px;">""",
@@ -94,7 +94,7 @@ with col1:
         range=[0, max_price * 1.1] 
     )
 
-    # Customize bars and hover template
+    
     fig.update_traces(
         hovertemplate="<b>%{x}</b><br>Preço Médio: $%{y:,.0f}<extra></extra>",
         marker_line_color='#FFFFFF',
@@ -257,10 +257,10 @@ with col4:
 
     st.plotly_chart(fig, use_container_width=True)
 with col5:
-    feature_cols = df.columns[15:]  # features start at column 14
+    feature_cols = df.columns[15:]  
     df[feature_cols] = df[feature_cols].astype(bool)
 
-    # Now you can safely count features
+   
     feature_counts = df[feature_cols].sum().sort_values(ascending=False)
     avg_price_features = {
     col: df.loc[df[col], "price"].mean() 
