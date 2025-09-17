@@ -16,7 +16,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 if st.button("Predição de Preço por Carro"):
-    js = "window.open('https://your-second-app-url/', '_blank')"  
+    js = "window.open('https://luisturra-carros-usados-dashboard-pr-prediostreamlit-app-69dct0.streamlit.app/', '_blank')"  
     components.html(f"<script>{js}</script>", height=0)
 st.markdown(
     """<hr style="border:2px solid #900ACA; border-radius:5px;">""",
