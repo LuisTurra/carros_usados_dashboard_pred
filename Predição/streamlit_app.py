@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-st.set_page_config(page_title="Car Price Prediction", layout="wide")
+st.set_page_config(page_title="Predição de Preço de Carros Usados", layout="wide")
 
 
 model = joblib.load('car_price_model.pkl') 
@@ -25,7 +25,7 @@ encoders = {
     'country': joblib.load('country_encoder.pkl')
 }
 
-st.title('Car Price Prediction App')
+st.title('Predição de Preço de Carros Usados')
 
 
 if 'inputs' not in st.session_state or st.session_state['inputs'] is None:
@@ -98,7 +98,7 @@ for i, feature in enumerate(features_list):
     inputs[feature] = 1 if col.checkbox(feature, key=feature) else 0
 
 
-if st.button('Predict Price'):
+if st.button('Preço Predição'):
     
     encoded_data = {key: encoders[key].transform([inputs[key]])[0] for key in encoders}
 
@@ -119,6 +119,6 @@ if st.button('Predict Price'):
 prediction = st.session_state.get('prediction', None)
 if prediction is not None:
     st.markdown(
-        f"<h1 style='text-align: center; color: green;'>Predicted Car Price: ${prediction:,.2f}</h1>",
+        f"<h1 style='text-align: center; color: green;'>Predição Preço: ${prediction:,.2f}</h1>",
         unsafe_allow_html=True
     )
