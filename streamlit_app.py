@@ -351,44 +351,45 @@ fig = px.choropleth(
 )
 
 fig.update_layout(
-    title={
-        'text': "Média de Preço dos Carros por País",
-        'y': 0.95,
-        'x': 0.5,
-        'xanchor': 'center',
-        'yanchor': 'top',
-    },
-    title_font={'size': 18, 'family': 'Arial', 'color': '#FFFFFF'},  # ✅ Correct place
+    title=dict(
+        text="Média de Preço dos Carros por País",
+        y=0.95,
+        x=0.5,
+        xanchor="center",
+        yanchor="top",
+        font=dict(size=18, family="Arial", color="#FFFFFF"),  # 👈 font goes here
+    ),
     geo=dict(
         showframe=False,
         showcoastlines=True,
-        coastlinecolor='#FFFFFF',
-        projection_type='equirectangular',
-        bgcolor='rgba(0,0,0,0)',
+        coastlinecolor="#FFFFFF",
+        projection_type="equirectangular",
+        bgcolor="rgba(0,0,0,0)",
         showland=True,
-        landcolor='rgba(50,50,50,0.2)',
+        landcolor="rgba(50,50,50,0.2)",
         resolution=50,
     ),
     coloraxis_colorbar=dict(
-        title='Média de Preço (USD)',
-        titlefont={'size': 12, 'color': '#FFFFFF'},
-        tickfont={'size': 10, 'color': '#E0E0E0'},
-        tickprefix='$',
-        tickformat=',.0f',
-        bgcolor='rgba(0,0,0,0)',
+        title=dict(
+            text="Média de Preço (USD)",
+            font=dict(size=12, color="#FFFFFF")  # 👈 fixed
+        ),
+        tickfont=dict(size=10, color="#E0E0E0"),  # 👈 fixed
+        tickprefix="$",
+        tickformat=",.0f",
+        bgcolor="rgba(0,0,0,0)",
         len=0.6,
         thickness=15,
         tickvals=[
-            country_avg['price'].min(),
-            country_avg['price'].mean(),
-            country_avg['price'].max()
+            country_avg["price"].min(),
+            country_avg["price"].mean(),
+            country_avg["price"].max(),
         ],
     ),
-    paper_bgcolor='rgba(0,0,0,0)',
-    plot_bgcolor='rgba(0,0,0,0)',
-    font=dict(color='#FFFFFF', family='Arial', size=10),
-    margin=dict(l=10, r=10, t=40, b=40),
-    
+    paper_bgcolor="rgba(0,0,0,0)",
+    plot_bgcolor="rgba(0,0,0,0)",
+    font=dict(color="#FFFFFF", family="Arial", size=10),
+    margin=dict(l=10, r=10, t=40, b=40)
 )
 
 fig.update_traces(
