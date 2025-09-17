@@ -388,7 +388,7 @@ fig.update_layout(
     plot_bgcolor='rgba(0,0,0,0)',
     font=dict(color='#FFFFFF', family='Arial', size=10),
     margin=dict(l=10, r=10, t=40, b=40),
-    autosize=True,
+    
 )
 
 fig.update_traces(
