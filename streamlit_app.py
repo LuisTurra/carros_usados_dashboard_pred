@@ -379,7 +379,7 @@ fig.update_layout(
         bgcolor='rgba(0,0,0,0)', 
         titlefont_color='#FFFFFF',
         tickcolor='#FFFFFF',
-        tickvals=[country_avg['price'].min(), country_avg['price'].max()],  
+       tickvals=[country_avg['price'].min(), country_avg['price'].max()] 
     ),
     paper_bgcolor='rgba(0,0,0,0)',  
     plot_bgcolor='rgba(0,0,0,0)', 
