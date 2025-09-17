@@ -15,13 +15,7 @@ st.markdown(
     """<hr style="border:2px solid #900ACA; border-radius:5px;">""",
     unsafe_allow_html=True
 )
-if st.button("Predição de Preço por Carro"):
-    js = "window.open('https://luisturra-carros-usados-dashboard-pr-prediostreamlit-app-69dct0.streamlit.app/', '_blank')"  
-    components.html(f"<script>{js}</script>", height=0)
-st.markdown(
-    """<hr style="border:2px solid #900ACA; border-radius:5px;">""",
-    unsafe_allow_html=True
-)
+
 col1, col2, col3 = st.columns(3)
 with col1:
     st.metric("Total de Carros", len(df))
