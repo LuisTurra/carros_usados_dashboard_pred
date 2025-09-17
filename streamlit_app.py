@@ -351,7 +351,7 @@ fig.update_layout(
         x=0.5,
         xanchor="center",
         yanchor="top",
-        font=dict(size=18, family="Arial", color="#FFFFFF"),  # 👈 font goes here
+        font=dict(size=18, family="Arial", color="#FFFFFF"),  
     ),
     geo=dict(
         showframe=False,
@@ -366,9 +366,9 @@ fig.update_layout(
     coloraxis_colorbar=dict(
         title=dict(
             text="Média de Preço (USD)",
-            font=dict(size=12, color="#FFFFFF")  # 👈 fixed
+            font=dict(size=12, color="#FFFFFF")  
         ),
-        tickfont=dict(size=10, color="#E0E0E0"),  # 👈 fixed
+        tickfont=dict(size=10, color="#E0E0E0"),  
         tickprefix="$",
         tickformat=",.0f",
         bgcolor="rgba(0,0,0,0)",
@@ -388,11 +388,11 @@ fig.update_layout(
 
 fig.update_traces(
     hovertemplate="<b>%{location}</b><br>Média de Preço: $%{z:,.0f}<extra></extra>",
-    zmin=country_avg['price'].min(),  # Explicitly set zmin/zmax for consistent scaling
+    zmin=country_avg['price'].min(),  
     zmax=country_avg['price'].max(),
 )
 
-# Render the chart with optimized size and caching for Streamlit Cloud
+
 @st.cache_data
 def plot_choropleth():
     return fig

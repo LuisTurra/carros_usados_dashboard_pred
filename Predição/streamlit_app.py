@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import joblib
-from sklearn.ensemble import RandomForestRegressor  # Replace with your model
+from sklearn.ensemble import RandomForestRegressor  
 from sklearn.preprocessing import LabelEncoder
 st.set_page_config(page_title="Predição de Preço de Carros Usados", layout="wide")
 
