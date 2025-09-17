@@ -13,17 +13,17 @@ model_columns = list(model.feature_names_in_)
 
 
 encoders = {
-    'make': joblib.load('make_encoder.pkl'),
-    'model': joblib.load('model_encoder.pkl'),
-    'trim': joblib.load('trim_encoder.pkl'),
-    'body_type': joblib.load('body_type_encoder.pkl'),
-    'fuel_type': joblib.load('fuel_type_encoder.pkl'),
-    'transmission': joblib.load('transmission_encoder.pkl'),
-    'condition': joblib.load('condition_encoder.pkl'),
-    'seller_type': joblib.load('seller_type_encoder.pkl'),
-    'city': joblib.load('city_encoder.pkl'),
-    'state': joblib.load('state_encoder.pkl'),
-    'country': joblib.load('country_encoder.pkl')
+    'make': joblib.load('Predição/make_encoder.pkl'),
+    'model': joblib.load('Predição/model_encoder.pkl'),
+    'trim': joblib.load('Predição/trim_encoder.pkl'),
+    'body_type': joblib.load('Predição/body_type_encoder.pkl'),
+    'fuel_type': joblib.load('Predição/fuel_type_encoder.pkl'),
+    'transmission': joblib.load('Predição/transmission_encoder.pkl'),
+    'condition': joblib.load('Predição/condition_encoder.pkl'),
+    'seller_type': joblib.load('Predição/seller_type_encoder.pkl'),
+    'city': joblib.load('Predição/city_encoder.pkl'),
+    'state': joblib.load('Predição/state_encoder.pkl'),
+    'country': joblib.load('Predição/country_encoder.pkl')
 }
 
 st.title('Predição de Preço de Carros Usados')
