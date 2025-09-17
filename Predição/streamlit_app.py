@@ -5,7 +5,7 @@ import joblib
 st.set_page_config(page_title="Predição de Preço de Carros Usados", layout="wide")
 
 
-model = joblib.load('./car_price_model.pkl') 
+model = joblib.load('Predição/car_price_model.pkl') 
 df = pd.read_csv('Carros Usados.csv')
 model_columns = list(model.feature_names_in_)
 
